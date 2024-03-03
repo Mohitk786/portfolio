@@ -13,7 +13,7 @@ const Projects = () => {
         </div>
 
 
-        <div className='w-[100%] flex flex-col  gap-16 items-center'>
+        <div className='w-[100%] flex flex-col  gap-24 items-center'>
             <ProjectCard
                 title="REEL PEDIA 📺"
                 description="Reel Pedia is more than just a movie database; it's a celebration of the cinematic arts. Dive into an extensive 

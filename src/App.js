@@ -3,6 +3,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import {Navbar} from "./components/Navbar"
 import Contact from "./components/Contact";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -11,7 +12,13 @@ function App() {
           <Home/>
           <About/>
           <Projects/>
+          {/* <Routes>
+            <Route path="/projects" element={<Projects/>}/>
+          </Routes> */}
           <Contact/>
+
+
+
     </div>
   );
 }

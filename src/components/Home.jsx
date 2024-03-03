@@ -16,7 +16,7 @@ import { DiMongodb } from "react-icons/di";
 const Home = () => {
   return (
     <div className='w-screen h-screen overflow-hidden flex flex-col items-center justify-center gap-[15%] bg-white'>
-        
+            
             <div className='flex gap-8 w-[60%] justify-center items-center'>
                 <div className='mt-4 p-6 w-[50%] flex flex-col justify-center gap-8 '>
                     <h1 className=' text-black font-bold text-5xl '>Full Stack <span className='text-indigo-700'>MERN Developer</span> 👋</h1>
@@ -56,16 +56,7 @@ const Home = () => {
                     </div>
                 </div>
 
-
-                <div className='w-full flex m-x-[2%] items-center justify-around'>
-                    <div className='flex w-[13%] justify-around'>
-                        <p className='text-black w-full font-semibold text-xl'>Programming languages</p>
-                        <p className='w-[1/10] border border-slate-600'></p>
-                </div>
-                    <div className='w-full flex gap-6 items-center justify-center' >
-                        <IoLogoJavascript className='text-yellow-300 text-5xl'/>
-                    </div>
-                </div>
+               
             </div>
 
     </div>
