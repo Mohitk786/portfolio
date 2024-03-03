@@ -5,6 +5,8 @@ import profile from "../assets/profile.jpg"
 import nodejs from "../assets/nodejs.webp"
 import expressjs from "../assets/express.webp"
 import redux from "../assets/redux.webp"
+import { SiLeetcode } from 'react-icons/si';
+
 
 import { FaHtml5 } from "react-icons/fa";
 import { IoLogoCss3 } from "react-icons/io";
@@ -22,8 +24,9 @@ const Home = () => {
                     <h1 className=' text-black font-bold text-5xl '>Full Stack <span className='text-indigo-700'>MERN Developer</span> 👋</h1>
                     <p className='text-slate-700/70 leading-6 font-bold'>Hi! I'm Mohit Kumar.  A passionate Full Stack MERN Developer based in Ghaziabad, India  </p>
                     <div className='text-3xl flex gap-3'>
-                    <a target='_blank' href='https://github.com/Mohitk786'><IoLogoLinkedin/></a>
-                    <a target='_blank' href='https://www.linkedin.com/in/mohit-kumar-02b54223a/'><FaGithub/></a>
+                    <a target='_blank' title='Linkedin' href='https://github.com/Mohitk786'><IoLogoLinkedin className='text-blue-600'/></a>
+                    <a target='_blank' title="Github" href='https://www.linkedin.com/in/mohit-kumar-02b54223a/'><FaGithub/></a>
+                    <a target='_blank' title='Leetcode' href='https://leetcode.com/mohitkumar2004/'><SiLeetcode className='text-yellow-600'/></a>
                     </div>
                 </div>
                 
@@ -44,15 +47,15 @@ const Home = () => {
                         <p className='w-[1/10] border border-slate-600'></p>
                     </div>
                     <div className='w-full flex gap-6 items-center justify-center' >
-                            <FaHtml5 className='text-orange-600 text-5xl'/>
-                            <IoLogoCss3 className='text-blue-600 text-5xl'/>
-                            <IoLogoJavascript className='text-yellow-300 text-5xl'/>
-                            <SiTailwindcss className='text-sky-800 text-5xl'/>
-                            <FaReact className='text-sky-400 text-5xl'/>
-                            <img src={redux} className='w-[12vh] text-5xl'/>
-                            <img src={nodejs} className=' w-[7vh] text-5xl'/>
-                            <img src={expressjs} className='text-5xl w-[13vh]' />
-                            <DiMongodb className='text-green-600 w-[5vh] text-5xl'/>
+                            <FaHtml5 title='HTML' className='text-orange-600 cursor-pointer  text-5xl'/>
+                            <IoLogoCss3 title='CSS' className='text-blue-600 cursor-pointer text-5xl'/>
+                            <IoLogoJavascript title='Javascript' className='text-yellow-300  cursor-pointer text-5xl'/>
+                            <SiTailwindcss title='Tailwind' className='text-sky-800 text-5xl cursor-pointer '/>
+                            <FaReact title='React' className='text-sky-400 cursor-pointer text-5xl'/>
+                            <img  title='Redux' src={redux} className='w-[12vh] text-5xl cursor-pointer'/>
+                            <img  title="Node.js" src={nodejs} className=' w-[7vh] text-5xl cursor-pointer'/>
+                            <img  title="Express.js" src={expressjs} className='text-5xl w-[13vh] cursor-pointer' />
+                            <DiMongodb className='text-green-600 w-[5vh] text-5xl cursor-pointer'/>
                     </div>
                 </div>
 

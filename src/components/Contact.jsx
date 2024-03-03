@@ -4,6 +4,7 @@ import { IoIosMailOpen } from "react-icons/io";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa6";
 
+
 const Contact = () => {
   return (
     <div className='w-screen mt-40 h-auto flex flex-col gap-16 items-center'>
@@ -34,8 +35,8 @@ const Contact = () => {
             <div className='text-white font-bold text-sm w-[50%] p-10 flex items center justify-between'>
                 <p clas>Copyright @ 2024. All rights are reserved</p>
                 <div className='text-2xl flex gap-5'>
-                    <a target='_blank' href='https://github.com/Mohitk786'><IoLogoLinkedin/></a>
-                    <a target='_blank' href='https://www.linkedin.com/in/mohit-kumar-02b54223a/'><FaGithub/></a>
+                    <a target='_blank' title='Linkedin' href='https://github.com/Mohitk786'><IoLogoLinkedin/></a>
+                    <a target='_blank' title='Github' href='https://www.linkedin.com/in/mohit-kumar-02b54223a/'><FaGithub/></a>
                 </div>
             </div>
         </div>
