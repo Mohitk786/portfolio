@@ -34,8 +34,8 @@ const Contact = () => {
             <div className='text-white font-bold text-sm w-[50%] p-10 flex items center justify-between'>
                 <p clas>Copyright @ 2024. All rights are reserved</p>
                 <div className='text-2xl flex gap-5'>
-                    <IoLogoLinkedin/>
-                    <FaGithub/>
+                    <a target='_blank' href='https://github.com/Mohitk786'><IoLogoLinkedin/></a>
+                    <a target='_blank' href='https://www.linkedin.com/in/mohit-kumar-02b54223a/'><FaGithub/></a>
                 </div>
             </div>
         </div>

@@ -22,8 +22,8 @@ const Home = () => {
                     <h1 className=' text-black font-bold text-5xl '>Full Stack <span className='text-indigo-700'>MERN Developer</span> 👋</h1>
                     <p className='text-slate-700/70 leading-6 font-bold'>Hi! I'm Mohit Kumar.  A passionate Full Stack MERN Developer based in Ghaziabad, India  </p>
                     <div className='text-3xl flex gap-3'>
-                        <IoLogoLinkedin/>
-                        <FaGithub/>
+                    <a target='_blank' href='https://github.com/Mohitk786'><IoLogoLinkedin/></a>
+                    <a target='_blank' href='https://www.linkedin.com/in/mohit-kumar-02b54223a/'><FaGithub/></a>
                     </div>
                 </div>
                 
