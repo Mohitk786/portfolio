@@ -3,7 +3,9 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import {Navbar} from "./components/Navbar"
 import Contact from "./components/Contact";
-import { Route, Routes } from "react-router-dom";
+
+
+
 
 function App() {
   return (

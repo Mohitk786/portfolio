@@ -4,10 +4,38 @@ import { IoIosMailOpen } from "react-icons/io";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa6";
 
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
+import { useEffect } from 'react';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
-  return (
-    <div className='w-screen mt-40 h-auto flex flex-col gap-16 items-center'>
+    
+    const contact = useRef();
+    useGSAP.register(contact);
+
+
+    useEffect(() => {
+        useGSAP.register(contact);
+        gsap.from(contact.current, {
+            y: 100,
+            duration: 0.8,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: contact.current,
+                start:   "top 100%",
+                end: "top 80%",
+                scrub: 0.5,
+            },
+        });
+
+    }, []);
+  
+    return (
+    <div ref={contact} className='w-screen mt-40 h-auto flex flex-col gap-16 items-center'>
         
         <div className='flex gap-2  flex-col w-[50%]'>
             <p className='text-indigo-700 font-bold text-4xl'>CONTACT</p>

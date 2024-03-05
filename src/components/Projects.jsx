@@ -2,12 +2,39 @@ import React from 'react'
 import reelpedia from "../assets/ree-pedia.png"
 import ProjectCard from './ProjectCard';
 import edtech from "../assets/Ed_Tech.png"
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
+import { useEffect } from 'react';
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 const Projects = () => {
-  return (
+  
+    const Head = useRef();
+
+    useEffect(() => {
+        useGSAP.register(Head);
+        gsap.from(Head.current, {
+            y: 100,
+            duration: 0.8,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: Head.current,
+                start:   "top 100%",
+                end: "top 30%",
+                scrub: 0.5,
+            },
+        });
+
+    }, []);
+  
+    return (
     <div className='w-screen mt-16 h-auto flex flex-col gap-20 items-center'>
         
-        <div className='flex gap-2  flex-col w-[50%]'>
+        <div ref={Head} className='flex gap-2  flex-col w-[50%]'>
             <p className='text-indigo-700 font-bold text-4xl'>PROJECTS</p>
             <h1 className='font-bold text-2xl'>Each project is a unique piece of development ✅</h1>
         </div>

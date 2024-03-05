@@ -1,13 +1,36 @@
 import React from 'react'
-import reelpedia from "../assets/ree-pedia.png"
 import { FaGithub } from "react-icons/fa6";
 import { LuArrowUpRightFromCircle } from "react-icons/lu";
+import { useEffect } from 'react';
+
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const ProjectCard = ({title, description, image, techUsed, flow, code, website}) => {
-    console.log(techUsed);
+        
+    const Card = useRef();
+    
+    useEffect(() => {
+    useGSAP.register(Card);
+    gsap.from(Card.current, {
+        y: 100,
+        duration: 1,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: Card.current,
+            start:   "top 100%",
+            end: "top 30%",
+            scrub: 0.5,
+        },
+    });
+    }, [])
   
     return (
-    <div className={`w-[60%] flex ${flow === "1" ? "justify-start" : "flex-row-reverse justify-end"} gap-14`}>
+    <div ref={Card} className={`w-[60%] flex ${flow === "1" ? "justify-start" : "flex-row-reverse justify-end"} gap-14`}>
             <div className='w-[80%]'>
                 <img 
                     src={image}
